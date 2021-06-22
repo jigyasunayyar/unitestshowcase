@@ -18,7 +18,8 @@ class TestMethods(unittest.TestCase):
         self.assertEqual(methods.multiply(3,4,5), 60)
         self.assertEqual(methods.multiply(4,5), 20)
         self.assertEqual(methods.multiply(-3,4,-1), 12)
-        self.assertEqual(methods.multiply(1000,0,-10), 0)
+#         self.assertEqual(methods.multiply(1000,0,-10), 0)
+        self.assertEqual(methods.multiply(1000,0,-10), 10)
        
     def test_pylint(self):
         results = lint.Run(['codefile/methods.py'],do_exit=False)
