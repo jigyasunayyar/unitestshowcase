@@ -5,4 +5,4 @@ steps:
     args: ["install", "-r", "requirements.txt", "--user"]
   - name: python
     entrypoint: python
-    args: ["unittestcases.py","--junitxml=${SHORT_SHA}_test_log.xml"] 
+    args: ["unittestcases.py"] 
