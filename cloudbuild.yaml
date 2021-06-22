@@ -3,6 +3,6 @@ steps:
   - name: python
     entrypoint: pip
     args: ["install", "-r", "requirements.txt", "--user"]
-   - name: python
-  entrypoint: python
-  args: ["unittestcases.py","--junitxml=${SHORT_SHA}_test_log.xml"] 
+  - name: python
+    entrypoint: python
+    args: ["unittestcases.py","--junitxml=${SHORT_SHA}_test_log.xml"] 
