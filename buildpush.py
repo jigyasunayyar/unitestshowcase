@@ -7,6 +7,6 @@ import os
 # os.system('twine upload --repository-url https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/ dist/*')
 
 print('copy the file to user home folder')
-os.system('cp .pypirc ~/')
+os.system('cp -f .pypirc ~/')
 
           
