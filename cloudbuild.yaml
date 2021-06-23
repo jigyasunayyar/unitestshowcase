@@ -23,4 +23,4 @@ steps:
   - name: python
     id: build push
     entrypoint: python
-    args: ["-m","twine","upload", "--repository","-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*"]
+    args: ["-m","twine","upload", "--repository-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*"]
