@@ -12,7 +12,7 @@ steps:
     id: build
     entrypoint: python
     args: ["setup.py","bdist_egg"]
-    - name: python
+  - name: python
     id: push egg
     entrypoint: python
     args: ["buildpush.py"]
