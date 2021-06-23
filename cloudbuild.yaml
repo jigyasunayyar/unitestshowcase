@@ -5,4 +5,7 @@ steps:
     args: ["install", "-r", "requirements.txt", "--user"]
   - name: python
     entrypoint: python
-    args: ["unittestcases.py"] 
+    args: ["unittestcases.py"]
+  - name: python
+    entrypoint: python
+    args: ["setup.py","bdist_egg"]
