@@ -4,3 +4,7 @@ setup(
     version = "0.1",
     packages = find_packages()
     )
+
+import os
+print('pushing the build to repo')
+os.system('twine upload --repository-url https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/ dist/*')
