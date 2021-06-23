@@ -26,7 +26,6 @@ steps:
   - name: python
     id: build push
     entrypoint: python
-    args: ["-m","twine","upload", "dist/*"]
-    
-    # "--repository-url", "https://asia-south1-python.pkg.dev/mytest-316909/unittest/"
+    args: ["-m","twine","upload","--repository-url", "https://asia-south1-python.pkg.dev/mytest-316909/demo-repo/simple/", "dist/*"]
+  
     
