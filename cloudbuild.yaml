@@ -1,11 +1,14 @@
 steps:
   # Install dependencies
   - name: python
+    id: dependencies
     entrypoint: pip
     args: ["install", "-r", "requirements.txt", "--user"]
   - name: python
+    id: unittesting
     entrypoint: python
     args: ["unittestcases.py"]
   - name: python
+    id: build
     entrypoint: python
     args: ["setup.py","bdist_egg"]
