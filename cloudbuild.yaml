@@ -19,11 +19,12 @@ steps:
     id: push egg
     entrypoint: python
     args: ["buildpush.py"]
-  #authorising the login
-  - name: google/cloud-sdk
-    args: ['gcloud', 'auth','login']
+#   #authorising the login
+#   - name: google/cloud-sdk
+#     args: ['gcloud', 'auth','login']
   #push to repository
   - name: python
     id: build push
     entrypoint: python
-    args: ["-m","twine","upload", "--repository-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*"]
+    args: ["-m","twine","upload", "--repository-url", "https://asia-south1-python.pkg.dev/mytest-316909/unittest/", "dist/*"]
+    
