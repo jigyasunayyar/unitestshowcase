@@ -14,11 +14,11 @@ steps:
     id: build
     entrypoint: python
     args: ["setup.py","bdist_egg"]
-#   # build push
-#   - name: python
-#     id: push egg
-#     entrypoint: python
-#     args: ["buildpush.py"]
+  # build push
+  - name: python
+    id: push egg
+    entrypoint: python
+    args: ["buildpush.py"]
   #push to repository
   - name: python
     id: build push
