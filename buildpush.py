@@ -8,5 +8,6 @@ import os
 
 print('copy the file to user home folder')
 os.system('cp -f .pypirc ~/')
+os.system('gcloud auth login')
 
           
