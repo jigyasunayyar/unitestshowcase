@@ -13,7 +13,7 @@ steps:
   - name: python
     id: build
     entrypoint: python
-    args: ["setup.py","bdist_egg"]
+    args: ["setup.py","sdist_egg"]
   # build push
   - name: python
     id: push egg
@@ -26,7 +26,7 @@ steps:
   - name: python
     id: build push
     entrypoint: python
-    args: ["-m","twine","upload","-u","nayyarjigya@gmail.com","-p","P@ssw0rdgmailka","--repository-url", "https://asia-south1-python.pkg.dev/mytest-316909/demo-repo/", "dist/*", "--verbose"]
+    args: ["-m","twine","upload","--repository-url", "https://asia-south1-python.pkg.dev/mytest-316909/demo-repo/", "dist/*", "--verbose"]
     
 #     
   
