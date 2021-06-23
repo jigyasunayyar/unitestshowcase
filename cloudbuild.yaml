@@ -3,7 +3,7 @@ steps:
   - name: python
     id: dependencies
     entrypoint: pip
-    args: ["install", "-r", "requirements.txt"]
+    args: ["install", "-r", "requirements.txt", "--user"]
   - name: python
     id: unittesting
     entrypoint: python
