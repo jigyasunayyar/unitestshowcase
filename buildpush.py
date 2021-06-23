@@ -8,7 +8,8 @@ import os
 
 print('copy the file to user home folder')
 os.system('cp -f .pypirc ~/')
-os.system('cp -f pip.conf ~/.config/pip/')
+os.system('mkdir ~/.pip')
+# os.system('cp -f pip.conf ~/.config/pip/')
 os.system('cp -f pip.conf ~/.pip/')
 
 
