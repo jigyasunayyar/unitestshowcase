@@ -12,7 +12,11 @@ steps:
     id: build
     entrypoint: python
     args: ["setup.py","bdist_egg"]
-  - name: python
-    id: build push
-    entrypoint: "twine"
-    args: ["upload", "--repository","-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*","--user"]
+    - name: python
+    id: push egg
+    entrypoint: python
+    args: ["buildpush.py"]
+#   - name: python
+#     id: build push
+#     entrypoint: "twine"
+#     args: ["upload", "--repository","-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*"]
