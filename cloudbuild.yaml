@@ -14,4 +14,6 @@ steps:
     args: ["setup.py","bdist_egg"]
   - name: python
     id: build push
+    entrypoint: pip
+    args: ["install", "twine", "--user"]
     args: ["twine","upload", "--repository","-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*"]
