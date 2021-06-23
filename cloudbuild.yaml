@@ -14,11 +14,11 @@ steps:
     id: build
     entrypoint: python
     args: ["setup.py","sdist"]
-#   # build push
-#   - name: python
-#     id: push egg
-#     entrypoint: python
-#     args: ["buildpush.py"]
+  # build push
+  - name: python
+    id: push egg
+    entrypoint: python
+    args: ["buildpush.py"]
 #   #authorising the login
 #   - name: google/cloud-sdk
 #     args: ['gcloud', 'auth','login']
