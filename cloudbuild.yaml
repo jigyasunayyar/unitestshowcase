@@ -4,18 +4,23 @@ steps:
     id: dependencies
     entrypoint: pip
     args: ["install", "-r", "requirements.txt", "--user"]
+  # automated unit test cases
   - name: python
     id: unittesting
     entrypoint: python
     args: ["unittestcases.py"]
+  #generating the egg/distribution file 
   - name: python
     id: build
     entrypoint: python
     args: ["setup.py","bdist_egg"]
+  # build push
   - name: python
     id: push egg
     entrypoint: python
     args: ["buildpush.py"]
+  #push to repository
   - name: python
     id: build push
+    entrypoint: python
     args: ["-m","twine","upload", "--repository","-url", "https://console.cloud.google.com/artifacts/pypi/mytest-316909/asia-south1/unittest-repo/", "dist/*"]
