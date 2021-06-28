@@ -22,7 +22,7 @@ steps:
   #deleting the current version
   - name: google/cloud-sdk
     id: delete version
-    args: ['gcloud', 'artifacts','versions','delete','0.1','--package=codefile','--repository=demo-repo','--location=asia-south1','--quiet]
+    args: ['gcloud', 'artifacts','versions','delete','0.1','--package=codefile','--repository=demo-repo','--location=asia-south1','--quiet']
   #push to repository
   - name: python
     id: build push
