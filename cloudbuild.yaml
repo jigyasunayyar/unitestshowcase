@@ -19,15 +19,18 @@ steps:
 #     id: push egg
 #     entrypoint: python
 #     args: ["buildpush.py"]
-#   #authorising the login
-#   - name: google/cloud-sdk
-#     args: ['gcloud', 'auth','login']
+  #deleting the current version
+  - name: google/cloud-sdk
+    id: delete version
+    args: ['gcloud', 'artifacts','versions','delete','0.1','--package=codefile','--repository=demo-repo','--location=asia-south1']
   #push to repository
   - name: python
     id: build push
     entrypoint: python
     args: ["-m","twine","upload","--repository-url", "https://asia-south1-python.pkg.dev/mytest-316909/demo-repo/", "dist/*", "--verbose"]
     
-#     
+#gcloud artifacts versions delete VERSION \
+#     --package=PACKAGE \
+#     [--repository=REPOSITORY] [--location=LOCATION]      
   
     
